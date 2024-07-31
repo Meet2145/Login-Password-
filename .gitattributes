@@ -1,2 +1,10 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import random
+import string
+
+def gen_password(lenght: int = 8):
+    alphabet = string.ascii_letters + string.digits + string.punctuation + string.hexdigits
+    password = ''.join(random.choice(alphabet) for i in range (lenght))
+    return password 
+
+password = gen_password()
+print(f"This is your secured password: {password}")
